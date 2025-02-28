@@ -22,8 +22,20 @@
 
         <div class="asidecontentcontainertop">
             <div class="aside-dates">
-                <p style="color: rgb(255, 255, 255);">23:00</p>
+                <p id="real-time" style="color: rgb(255, 255, 255);"></p>
             </div>
+            <script>
+                function updateTime() {
+                    const now = new Date();
+                    const hours = now.getHours().toString().padStart(2, '0');
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    document.getElementById("real-time").textContent = `${hours}:${minutes}`;
+                }
+                
+                // Update time immediately and then every second
+                updateTime();
+                setInterval(updateTime, 1000);
+                </script>
             <div>
                 <img class="aside-img" src="/assets/images/download.png" alt="egide">
             </div>
@@ -283,7 +295,7 @@
                          </p>
                    <div class="CAT ">
                  <div class="common-button">
-                    <a style="    color: rgb(12, 120, 214);" href="https://docs.google.com/document/d/1k5cV45-mWCqM6SwJa1fc2O2wIp3sUEa9/edit?usp=sharing&ouid=110692781199541034676&rtpof=true&sd=true">Hire Me</a>
+                    <a style="    color: rgb(12, 120, 214);" href="https://www.linkedin.com/in/mbonigaba-egide-412171313/" target="blank">Hire Me</a>
                  </div>
                  <div class="bio-smalldiv">
                     <div class="line"></div>
